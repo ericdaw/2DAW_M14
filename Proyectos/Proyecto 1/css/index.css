@@ -1,0 +1,26 @@
+body{
+	background-color:#eaeeed;
+}
+
+.dashboard{
+	margin-left: 400px;
+	
+}
+.dashboard img{
+	width: 150px;
+}
+.cuerpo{
+	width: 70%;
+	margin: 30px auto;
+	border-radius: 1%;
+}
+.primeracol{
+	margin-left:150px;
+}
+.fondoo{
+	background-color:#eaeeed;
+}
+.tit{
+	border: 1px solid;
+	width: 1000px;
+}

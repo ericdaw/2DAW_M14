@@ -1,0 +1,59 @@
+/* .container div div{
+    height: 60px;
+} */
+
+.vertical{
+    height: 120px;
+}
+
+.celda{
+    height: 60px;
+}
+
+.red{
+    background-color: red;
+}
+
+.blue{
+    background-color: blue;
+    color: white;
+}
+
+.yellow{
+    background-color: yellow;
+}
+
+.black{
+    background-color: black;
+}
+
+.green{
+    background-color: green;
+}
+
+.border{
+    border: 2px solid black;
+}
+
+.row:first-child {
+    border-bottom: 3px solid #FF3986;
+}
+  
+  
+h1 {
+    color: #FF3986;
+    font-weight: bolder;
+    font-style: italic;
+}
+
+.row:first-child .col {
+  background-color: #DDDDDD;
+  border-radius: 10px;
+}
+  
+.icon {
+  height: 64px;
+  margin: 15px;
+  width: 64px;
+}
+  

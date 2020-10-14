@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Soul Cars - Registro</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<link rel="stylesheet" type="text/css" href="css/registro.css">
+		<script type="text/javascript">
+			function clave(){
+				c1 = document.form1.c1.value
+				c2 = document.form1.c2.value
+
+				if (c1 != c2) {
+					alert("Las 2 contraseñas son distintas")
+				}
+
+				/*em = document.form1.email.value
+				if(\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3,4})+$/.test(em)){
+					alert("La dirección de email es correcta")
+				}
+				else{
+					alert("La dirección de email es incorrecta")
+				}*/
+
+			}
+		</script>
+
+	</head>
+	<body>
+		<div class="bg-white">
+			<div class=" dashboard container-fluid d-inline">
+				<a href="index.html"><img alt="logo" src="img/logo.png"></a>
+			</div>
+			<div class="container d-inline-flex">
+				<div class="row mb-3">
+					<h1 class="font-italic">SOUL CARS</h1>
+					<div class="primeracol col">
+						<p class="h2 text-primary">Rellena los datos para poder registrarte !!</p>
+					</div>
+			
+				</div>	
+			</div>
+		</div>
+		<div class="formulario font-weight-bold">
+			<div class="bloque container p-5">
+				<form action="#" method="GET" name="form1">
+					<label>Nombre de usuario: </label><br><input type="text" name="usu" minlength="4" placeholder="Mínimo 4 carácteres" required><br>
+					<label>Password: </label><br><input type="password" name="c1" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"><br>
+					<label>Confirmar password: </label><br><input type="password" name="c2" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"><br>
+					<label>Correo: </label><br><input type="email" name="correo" id="email" placeholder="ejemplo@hotmail.com" required><br>
+					<label>Nombre: </label><br><input type="text" name="nom" required><br>
+					<label>Apellidos: </label><br><input type="text" name="apell" required><br>
+					<label>Fecha de nacimiento</label><br><input type="date" name="fecha" required><br>
+					<label>Teléfono: </label><br><input type="number" name="tel" placeholder="678162534" required><br>
+					<label>Foto de perfil: </label><br><input type="image" name="foto" alt="Insertar imagen"><br>
+					<label>Color de perfil: </label><br><input type="color" name="color"><br>
+					<label>Sexo: </label><br>
+					<select name="sexo">
+						<option>Hombre</option>
+						<option>Mujer</option>
+						<option>Otro</option>
+					</select><br>
+					<label>Pregunta para recordar: </label><br>
+					<select name="pregunta">
+						<option>Nombre de tu mascota: </option>
+						<option>Nombre de tu ciudad favorita: </option>
+						<option>Nombre de tu asignatura favorita: </option>
+					</select><br>
+					<label></label><br><input type="text" name="usu" placeholder="Respuesta" required><br>
+					<br>
+					<label></label><input type="submit" name="enviar" value="Enviar" onclick="clave()">
+					<label></label><input type="reset" name="netejar" value="Netejar">
+				</form>
+			</div>
+		</div>
+	</body>
+</html>

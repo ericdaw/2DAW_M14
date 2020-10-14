@@ -1,0 +1,21 @@
+body{
+    background-image:url(../fondo.jpg);
+    background-size: 100%;
+	background-repeat: no-repeat;
+}
+.bloque{
+    background-color:#9DCBFA;
+}
+.dashboard{
+	margin-left:450px;
+}
+.dashboard img{
+	width: 150px;
+}
+.formulario{
+    background-color: #eaeeed;
+}
+.primeracol{
+    margin-left: 60px;
+    margin-top: 7px;
+}
