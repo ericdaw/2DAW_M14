@@ -17,10 +17,10 @@
         <div class="dashboard container-flex">
             <!-- Primera fila imagen, título y botón de ayuda  -->
             <div class="row justify-content-around align-items-center ml-5">
-                <div class="col-1 ml-5"><img src="img/dashboard.png" alt="imagen" class="rounded img-fluid" style="width:70%"></div>
+                <div class="col-1 ml-5"><img src="img/evento.png" alt="imagen" class="logo rounded img-fluid"></div>
                 <div class="col-3 mt-2 "><h3>Cultura Mataró <blockquote class="text-light">venda d'entrades</blockquote></h3></div>
                 <div class="col-1 offset-3">
-                    <button class="btn btn-dark" data-toggle="modal" data-target="#ajuda">
+                    <button class="btn btn-light" data-toggle="modal" data-target="#ajuda">
                         Ajuda
                     </button>
                 </div>
