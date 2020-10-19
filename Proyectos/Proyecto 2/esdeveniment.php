@@ -1,74 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+ 
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-			<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="css/css.css">
         <title>Esdeveniment</title>
+        
     </head>
     <body>
-        <div class="dashboard container-flex bg-secondary mt-2">
-            <div class="row justify-content-around align-items-center">
-                <div class="col-1"><img src="img/dashboard.png" alt="imagen" class="rounded img-fluid"></div>
-                <div class="col-5"><h2>Cultura Mataró venda d'entrades</h2></div>
-                <div class="col-1">
-                    <div class="modal" id="ajuda">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <div class="modal-tittle">
-                                        Título
-                                    </div>
-                                </div>
-                                <div class="modal-body">
-                                        Contenido de la ventana modal
-                                </div>
-                                <div class="modal-footer">
-                                        Pie de la ventana modal
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="btn btn-info" data-toggle="modal" data-target="#ajuda">
+        <!-- Contenedor DASHBOARD -->
+        <div class="dashboard container-flex">
+            <!-- Primera fila imagen, título y botón de ayuda  -->
+            <div class="row justify-content-around align-items-center ml-5">
+                <div class="col-1 ml-5"><img src="img/dashboard.png" alt="imagen" class="rounded img-fluid" style="width:70%"></div>
+                <div class="col-3 mt-2 "><h3>Cultura Mataró <blockquote class="text-light">venda d'entrades</blockquote></h3></div>
+                <div class="col-1 offset-3">
+                    <button class="btn btn-dark" data-toggle="modal" data-target="#ajuda">
                         Ajuda
                     </button>
                 </div>
-            </div>  
+            </div>
+
         </div>
-        <div class="container row mx-auto bg-info mt-4">
-            <div class="container col-9 bg-success">
+        <!-- Componente Modal para mostrar mensaje dentro del botón Ayuda -->
+        <div class="modal" id="ajuda">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div class="modal-title">
+                            Título
+                            <div class="text-right">
+                                <span data-dismiss="modal">X</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                            Contenido de la ventana modal
+                    </div>
+                    <div class="modal-footer">
+                            Pie de la ventana modal
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Contenedor grande -->
+        <div class="container row mx-auto mt-4">
+            <!-- Contenedor de espectáculos -->
+            <div class="container col-9 mt-4">
                 <h2>Esdeveniments a la venda</h2>
-                <div class="container row">
-                    <div class="container col-4 bg-primary">
-                        <figure class="figure">
+                <style> h2 {border-bottom:1px solid} </style>
+                <div class="container row align-items-end mt-5">
+                    <div class="container col-4">
+                        <figure class="figure" >
                             <img src="img/monologo.jpg" alt="esd1" class="figure-img img-fluid">
                             <figure-caption>Texto imagen</figure-caption>
                         </figure>
                     </div>
-                    <div class="container col-4 bg-primary">
-                        <figure class="figure">
+                    <div class="container col-4">
+                        <figure class="figure" >
                             <img src="img/bruce.jpg" alt="esd2" class="figure-img img-fluid">
                             <figure-caption>Texto imagen2</figure-caption>
                         </figure>
                     </div>
                 </div>
-                <div class="container row mt-3 mb-3 mx-auto">
-                    <div class="container col-3 bg-primary m-4">
+                <div class="container row align-items-end mt-3 mb-3 mx-auto">
+                    <div class="container col-3 m-4">
                         <figure class="figure">
                             <img src="img/notas_musicales.jpg" alt="esd3" class="figure-img img-fluid">
                             <figure-caption>Texto imagen3</figure-caption>
                         </figure>
                     </div>
-                    <div class="container col-3 bg-primary m-4">
+                    <div class="container col-3 m-4">
                         <figure class="figure">
                             <img src="img/bob.jpg" alt="esd4" class="figure-img img-fluid">
                             <figure-caption>Texto imagen4</figure-caption>
                         </figure>
                     </div>
-                    <div class="container col-3 bg-primary m-4">
+                    <div class="container col-3 m-4">
                         <figure class="figure">
                             <img src="img/leon.jpg" alt="esd5" class="figure-img img-fluid">
                             <figure-caption>Texto imagen5</figure-caption>
@@ -76,7 +89,8 @@
                     </div>
                 </div>
             </div>
-            <div class="container col-3 bg-warning">
+            <!-- Contenedor de acceso para registrarse -->
+            <div class="container col-3 mt-4">
                 <h2>Accés</h2>
                 <form action="#" method="POST">
                     <div class="form-group">
@@ -98,5 +112,39 @@
                 </div>
             </div>
         </div>
+
     </body>
+
+    <footer>
+        <!-- Contenedor FOOTER -->
+        <div class="footer container-flex mt-2">
+            <!-- Primera fila imagen, título y botón de ayuda  -->
+            <div class="row justify-content-between ml-5">
+                <div class="col-3 mt-3">
+                    <p>
+                        Ajuntament de Badalona<br>
+                        Direcció de Cultura<br>
+                        P-0812000H<br>
+                        Cºdel mar 1 Badalona<br>
+                        <a href="https://goo.gl/maps/77tJg5sd97tHZJv19">--- Google Maps</a><br>
+                        Tel. 93 311 11 11 - Fax 93 758 23 62
+                        A/e: <a href="">Cultura@ajbadalona.cat</a>
+                    </p>
+                </div>
+                <div class="col-3 mt-3">
+                    <p>
+                        Horari d'atenció al públic i venta d'entrades de dilluns a divendres de 9 a 14h <br>
+                        De dimecres a divendres de 18 a 20h.
+                    </p>
+                </div>
+                <div class="col-3 mt-3">
+                    <p>
+                        <a href="">Nota legal</a><br>
+                        <a href="">Subscriu-te al butlletí</a><br>
+                        <a href="">Contacta</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
 </html>
