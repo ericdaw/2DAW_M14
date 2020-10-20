@@ -8,11 +8,18 @@
 }
 footer p {
     font-size: 12px;
+    color: white;
 }
 body > div > div :nth-child(2) h3{
     color: #ff9e00;
     font-weight: bold;
 }
 .logo{
-    width: 50%;
+    width: 75%;
+}
+.op{
+    font-size: 12px;
+}
+h2 {
+    border-bottom:1px solid
 }
