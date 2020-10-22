@@ -26,7 +26,6 @@
                     </button>
                 </div>
             </div>
-
         </div>
         <!-- Componente Modal para mostrar mensaje dentro del botón Ayuda -->
         <div class="modal" id="ajuda">
@@ -50,101 +49,98 @@
             </div>
         </div>
         <!-- Contenedor grande -->
-        <div class="container row mx-auto mt-4 mb-5">
-            <!-- Contenedor de REGISTRO -->
-            <div class="container col-9 mt-4">
-                <h2>Registre d'usuari</h2>
-                <div class="row mt-5 p-4">
+        <div class="container">
+            <div class="row mx-auto mt-4 mb-5">
+                <!-- Contenedor de REGISTRO -->
+                <div class="container col-9 mt-4">
+                    <h2>Registre d'usuari</h2>
+                    <div class="container row mt-4">
+                        <div class="col-md-6">
+                            <form action="#" method="POST">
+                                <div class="form-group">
+                                    <label class="col-label">Nom</label>
+                                    <input type="text" class="form-control form-control" id="nom" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-label">Cognom</label>
+                                    <input type="text" class="form-control form-control" id="apell1" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-label">Adreça postal </label>
+                                    <input type="text" class="form-control form-control" id="direc" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-label">Població </label>
+                                    <input type="text" class="form-control form-control" id="poblacio" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-label">Codi postal </label>
+                                    <input type="number" class="form-control form-control" id="cp" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-label">Telèfon mòbil </label>
+                                    <input type="number" class="form-control form-control" id="mobil" required>
+                                </div>
+                        </div>
+                        <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="col-label">Telèfon fix </label>
+                                    <input type="number" class="form-control form-control" id="fijo" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-label">Data de naixement </label>
+                                    <input type="date" class="form-control form-control" id="naix" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-label">Correu electrònic </label>
+                                    <input type="email" class="form-control form-control" id="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-label">Repetir correu electrònic </label>
+                                    <input type="email" class="form-control form-control" id="email2" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-label">Contrasenya </label>
+                                    <input type="password" class="form-control form-control" id="pass" required>
+                                </div>
+                                <div class="text-right mt-5">
+                                    <input type="submit" class="btn btn-primary"  value="Registrar" id="registro" required>
+                                </div>   
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- Contenedor de acceso para registrarse -->
+                <div class="container col-md-3 mt-4">
+                    <h2>Accés</h2>
                     <form action="#" method="POST">
-                        <div class="row">
-                            <div class="form-group m-2">
-                                <label class="col-label">Nom</label>
-                                <input type="text" class="form-control form-control" id="nom" required>
-                            </div>
-                            <div class="form-group m-2">
-                                <label class="col-label">Cognom 1</label>
-                                <input type="text" class="form-control form-control" id="apell1" required>
-                            </div>
-                            <div class="form-group m-2">
-                                <label class="col-label">Cognom 2</label>
-                                <input type="text" class="form-control form-control" id="apell2" required>
-                            </div>
-                            <div class="form-group m-2">
-                                <label class="col-label">Adreça postal </label>
-                                <input type="text" class="form-control form-control" id="direc" required>
-                            </div>
-                            <div class="form-group m-2">
-                                <label class="col-label">Població </label>
-                                <input type="text" class="form-control form-control" id="poblacio" required>
-                            </div>
-                            <div class="form-group m-2">
-                                <label class="col-label">Codi postal </label>
-                                <input type="number" class="form-control form-control" id="cp" required>
-                            </div>
-                            <div class="form-group m-2">
-                                <label class="col-label">Telèfon mòbil </label>
-                                <input type="number" class="form-control form-control" id="mobil" required>
-                            </div>
+                        <div class="form-group mt-4">
+                            <label for="usu">Nom d'usuari: </label>
+                            <input type="text" class="form-control" id="usu" required>
                         </div>
-                        <div class="row">
-                            <div class="form-group m-2">
-                                <label class="col-label">Telèfon fix </label>
-                                <input type="number" class="form-control form-control" id="fijo" required>
-                            </div>
-                            <div class="form-group m-2">
-                                <label class="col-label">Data de naixement </label>
-                                <input type="date" class="form-control form-control" id="naix" required>
-                            </div>
-                            <div class="form-group m-2">
-                                <label class="col-label">Correu electrònic </label>
-                                <input type="email" class="form-control form-control" id="email" required>
-                            </div>
-                            <div class="form-group m-2">
-                                <label class="col-label">Repetir correu electrònic </label>
-                                <input type="email" class="form-control form-control" id="email2" required>
-                            </div>
-                            <div class="form-group m-2">
-                                <label class="col-label">Contrasenya </label>
-                                <input type="password" class="form-control form-control" id="pass" required>
-                            </div>
-                            <div class="text-right ml-5 m-2">
-                                <input type="submit" class="btn btn-primary"  value="Registrar" id="registro" required>
-                            </div>
+                        <div class="form-group">
+                            <label for="pass">Contrasenya: </label>
+                            <input type="password" class="form-control" id="pass" required>
                         </div>
+                        <button type="submit" class="btn btn-success">Enviar</button>
                     </form>
-                </div>
-            </div>
-            <!-- Contenedor de acceso para registrarse -->
-            <div class="container col-3 mt-4">
-                <h2>Accés</h2>
-                <form action="#" method="POST">
-                    <div class="form-group mt-4">
-                        <label for="usu">Nom d'usuari: </label>
-                        <input type="text" class="form-control" id="usu" required>
+                    <br>
+                    <div class="op mt-3">
+                        <p>No recordes la teva contrasenya ? </p><a href="#">clica aquí</a>
                     </div>
-                    <div class="form-group">
-                        <label for="pass">Contrasenya: </label>
-                        <input type="password" class="form-control" id="pass" required>
+                    <div class="op mt-4">
+                        <p>Registra't per obtenir un compte </p><a href="registre.php">clica aquí</a>
                     </div>
-                    <button type="submit" class="btn btn-success">Enviar</button>
-                </form>
-                <br>
-                <div class="op mt-3">
-                    <p>No recordes la teva contrasenya ? </p><a href="#">clica aquí</a>
-                </div>
-                <div class="op mt-4">
-                    <p>Registra't per obtenir un compte </p><a href="registre.php">clica aquí</a>
                 </div>
             </div>
         </div>
-
     </body>
 
     <footer>
         <!-- Contenedor FOOTER -->
         <div class="footer container-fluid mt-2">
             <!-- Primera fila imagen, título y botón de ayuda  -->
-            <div class="row justify-content-between ml-5">
+            <div class="row justify-content-around ml-5">
                 <div class="col-3 mt-3">
                     <p>
                         Ajuntament de Badalona<br>
