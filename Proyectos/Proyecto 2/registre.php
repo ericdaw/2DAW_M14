@@ -56,7 +56,7 @@
                     <h2>Registre d'usuari</h2>
                     <div class="container row mt-4">
                         <div class="col-md-6">
-                            <form action="#" method="POST">
+                            <form action="validacio.php" method="POST">
                                 <div class="form-group">
                                     <label class="col-label">Nom</label>
                                     <input type="text" class="form-control form-control" id="nom" required>
