@@ -1,4 +1,4 @@
--- phpMyAdmin SQL Dump
+﻿-- phpMyAdmin SQL Dump
 -- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
@@ -46,7 +46,7 @@ CREATE TABLE `recinte` (
   `id_recinte` int(11) NOT NULL,
   `nom_recinte` int(11) NOT NULL,
   `adreca` varchar(255) NOT NULL,
-  `num_places` int(11) NOT NULL
+  `num_places` int(11)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -58,7 +58,7 @@ CREATE TABLE `recinte` (
 CREATE TABLE `reserva` (
   `id_espectacle` int(11) NOT NULL,
   `id_usuari` int(11) NOT NULL,
-  `entradas` int(11) NOT NULL
+  `entradas` int(11)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -71,12 +71,13 @@ CREATE TABLE `usuaris` (
   `id_usuari` int(11) NOT NULL,
   `nom` varchar(255) NOT NULL,
   `cognom` varchar(255) NOT NULL,
-  `adreca` varchar(255) NOT NULL,
-  `poblacio` varchar(255) NOT NULL,
-  `codi_postal` int(11) NOT NULL,
-  `telefono` int(11) NOT NULL,
-  `movil` int(11) NOT NULL,
-  `data_naixement` date NOT NULL,
+  `adreca` varchar(255),
+  `poblacio` varchar(255),
+  `codi_postal` int(11),
+  `telefono` int(11),
+  `movil` int(11),
+  `data_naixement` date,
+  `email` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
