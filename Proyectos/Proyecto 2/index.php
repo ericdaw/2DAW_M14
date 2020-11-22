@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -100,25 +104,61 @@
         </div>
         <!-- Contenedor de acceso para registrarse -->
         <div class="container col-3 mt-4">
-            <h2>Accés</h2>
-            <form action="#" method="POST">
-                <div class="form-group mt-4">
-                    <label for="usu">Correu electrònic: </label>
-                    <input type="text" class="form-control" id="usu" required>
+            <?php
+            if ($_SESSION['log']) {
+            ?>
+                <h2>Menú d'Usuari</h2>
+                <div class="d-flex justify-content-center btn btn-dark m-2">
+                    <a href="editar.php">
+                        <h5>Edita el teu perfil</h5>
+                    </a>
                 </div>
-                <div class="form-group">
-                    <label for="pass">Contrasenya: </label>
-                    <input type="password" class="form-control" id="pass" required>
+                <div class="d-flex justify-content-center btn btn-dark m-2">
+                    <h5>Historial de compres</h5>
                 </div>
-                <button type="submit" class="btn btn-success">Enviar</button>
-            </form>
-            <br>
-            <div class="op mt-3">
-                <p>No recordes la teva contrasenya ? </p><a href="recuperar_contra.php">clica aquí</a>
-            </div>
-            <div class="op mt-4">
-                <p>Registra't per obtenir un compte </p><a href="registre.php">clica aquí</a>
-            </div>
+                <div class="d-flex justify-content-center btn btn-dark m-2">
+                    <a href="recuperar_contra.php">
+                        <h5>Canvi de contrasenya</h5>
+                    </a>
+                </div>
+                <div class="d-flex justify-content-center btn btn-dark m-2">
+                    <a href="salir.php">
+                        <h5>Tanca la sessió</h5>
+                    </a>
+                </div>
+                <br>
+            <?php
+            } else {
+            ?>
+                <h2>Accés</h2>
+                <form action="#" method="POST">
+                    <div class="form-group mt-4">
+                        <label for="usu">Correu electrònic: </label>
+                        <input type="text" class="form-control" name="usu" id="usu" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="pass">Contrasenya: </label>
+                        <input type="password" class="form-control" name="pass" id="pass" required>
+                    </div>
+                    <button type="submit" class="btn btn-success" name="enviar" id="enviar">Enviar</button>
+                </form>
+                <br>
+                <div class="op mt-3">
+                    <p>No recordes la teva contrasenya ? </p><a href="recuperar_contra.php">clica aquí</a>
+                </div>
+                <div class="op mt-4">
+                    <p>Registra't per obtenir un compte </p><a href="registre.php">clica aquí</a>
+                </div>
+            <?php
+                if (isset($_POST['enviar'])) {
+                    $correo = $_POST['usu'];
+                    $contra = md5($_POST['pass']);
+                    include_once __DIR__ . "/bdd.php";
+                    include_once __DIR__ . "/validar_email_contra.php";
+                }
+            }
+            ?>
+
         </div>
     </div>
 

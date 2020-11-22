@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -62,11 +66,11 @@
             <form action="#" method="POST">
                 <div class="form-group mt-4">
                     <label for="usu">Correu electrònic: </label>
-                    <input type="text" class="form-control" id="usu" required>
+                    <input type="text" class="form-control" name="usu" id="usu" required>
                 </div>
                 <div class="form-group">
                     <label for="pass">Contrasenya: </label>
-                    <input type="password" class="form-control" id="pass" required>
+                    <input type="password" class="form-control" name="pass" id="pass" required>
                 </div>
                 <button type="submit" class="btn btn-success" name="enviar" id="enviar">Enviar</button>
             </form>
@@ -83,25 +87,7 @@
             $correo = $_POST['usu'];
             $contra = md5($_POST['pass']);
             include_once __DIR__ . "/bdd.php";
-
-            try {
-                $consulta = $conexion->prepare("SELECT email, password FROM usuaris");
-                $consulta->execute();
-                $row = $consulta->fetch();
-                $cont = 0;
-                while ($row) {
-                    if ($row[0] == $correo && $row[1] == $contra) {
-                        echo "hola";
-                    }
-                    else{
-                        echo "adios";
-                        echo $row[0];
-                    }
-                    $row = $consulta->fetch();
-                }
-            } catch (PDOException $e) {
-                echo "Error " . $e->getMessage();
-            }
+            include_once __DIR__ . "/validar_email_contra.php";
         }
         ?>
     </div>

@@ -1,6 +1,6 @@
 <?php
 
-$dsn = "mysql:host=mysql;dbname=venta_entrades";
+$dsn = "mysql:host=mysql;dbname=venta_entrades;charset=utf8";
 $user = "root";
 $pass = "root";
 $options = array(
