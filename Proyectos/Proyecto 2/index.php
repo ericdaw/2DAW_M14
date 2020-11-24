@@ -1,5 +1,10 @@
 <?php
 session_start();
+if (isset($_POST['usu'])) {
+    $correo = $_POST['usu'];
+    $_SESSION['usu'] = $correo;
+   
+}
 ?>
 
 <!DOCTYPE html>
@@ -20,85 +25,52 @@ session_start();
 
 <body>
 
-    <!-- Contenedor DASHBOARD -->
-    <div class="dashboard container-fluid">
-        <!-- Primera fila imagen, título y botón de ayuda  -->
-        <div class="row justify-content-center align-items-center mr-5">
-            <div class="col-1 ml-5"><img src="img/evento.png" alt="imagen" class="logo rounded img-fluid"></div>
-            <div class="col-3 mt-2 ">
-                <h3>Cultura Mataró <blockquote class="text-light">venda d'entrades</blockquote>
-                </h3>
-            </div>
-            <div class="col-1 offset-4">
-                <button class="btn btn-light" data-toggle="modal" data-target="#ajuda">
-                    Ajuda
-                </button>
-            </div>
-        </div>
+    <?php
+    include_once __DIR__ . "/dinamico/header.php";
+    ?>
 
-    </div>
-    <!-- Componente Modal para mostrar mensaje dentro del botón Ayuda -->
-    <div class="modal" id="ajuda">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <div class="modal-title">
-                        Título
-                        <div class="text-right">
-                            <span data-dismiss="modal">X</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-body">
-                    Contenido de la ventana modal
-                </div>
-                <div class="modal-footer">
-                    Pie de la ventana modal
-                </div>
-            </div>
-        </div>
-    </div>
     <!-- Contenedor grande -->
     <div class="container row mx-auto mt-4 mb-5">
         <!-- Contenedor de espectáculos -->
         <div class="container col-9 mt-4">
             <h2>Esdeveniments a la venda</h2>
+       
             <div class="container row align-items-end mt-5">
                 <div class="container col-4">
-                    <!-- <figure class="figure" >
-                            <img src="img/monologo.jpg" alt="esd1" class="figure-img img-fluid">
-                            <figure-caption>Texto imagen</figure-caption>
-                        </figure> -->
+                    <figure class="figure">
+                        <img src="img/monologo.jpg" alt="esd1" class="figure-img img-fluid">
+                        <figure-caption>Texto imagen</figure-caption>
+                    </figure>
                 </div>
                 <div class="container col-4">
-                    <!--
-                        <figure class="figure" >
-                            <img src="img/bruce.jpg" alt="esd2" class="figure-img img-fluid">
-                            <figure-caption>Texto imagen2</figure-caption>
-                        </figure> -->
+
+                    <figure class="figure">
+                        <img src="img/bruce.jpg" alt="esd2" class="figure-img img-fluid">
+                        <figure-caption>Texto imagen2</figure-caption>
+                    </figure>
                 </div>
             </div>
             <div class="container row align-items-end mt-3 mb-3 mx-auto">
                 <div class="container col-3 m-4">
-                    <!--
-                        <figure class="figure">
-                            <img src="img/notas_musicales.jpg" alt="esd3" class="figure-img img-fluid">
-                            <figure-caption>Texto imagen3</figure-caption>
-                        </figure> -->
+
+                    <figure class="figure">
+                        <img src="img/notas_musicales.jpg" alt="esd3" class="figure-img img-fluid">
+                        <figure-caption>Texto imagen3</figure-caption>
+                    </figure>
                 </div>
                 <div class="container col-3 m-4">
-                    <!--
-                        <figure class="figure">
-                            <img src="img/bob.jpg" alt="esd4" class="figure-img img-fluid">
-                            <figure-caption>Texto imagen4</figure-caption>
-                        </figure> -->
+
+                    <figure class="figure">
+                        <img src="img/bob.jpg" alt="esd4" class="figure-img img-fluid">
+                        <figure-caption>Texto imagen4</figure-caption>
+                    </figure>
                 </div>
                 <div class="container col-3 m-4">
-                    <!--
-                        <figure class="figure">
-                            <img src="img/leon.jpg" alt="esd5" class="figure-img img-fluid">
-                            <figure-caption>Texto imagen5</figure-caption>
-                        </figure> -->
+
+                    <figure class="figure">
+                        <img src="img/leon.jpg" alt="esd5" class="figure-img img-fluid">
+                        <figure-caption>Texto imagen5</figure-caption>
+                    </figure>
                 </div>
             </div>
         </div>
@@ -109,7 +81,7 @@ session_start();
             ?>
                 <h2>Menú d'Usuari</h2>
                 <div class="d-flex justify-content-center btn btn-dark m-2">
-                    <a href="editar.php">
+                    <a href="edita_perfil.php">
                         <h5>Edita el teu perfil</h5>
                     </a>
                 </div>
@@ -153,8 +125,8 @@ session_start();
                 if (isset($_POST['enviar'])) {
                     $correo = $_POST['usu'];
                     $contra = md5($_POST['pass']);
-                    include_once __DIR__ . "/bdd.php";
-                    include_once __DIR__ . "/validar_email_contra.php";
+                    include_once __DIR__ . "/dinamico/bdd.php";
+                    include_once __DIR__ . "/dinamico/validar_email_contra.php";
                 }
             }
             ?>
@@ -165,36 +137,9 @@ session_start();
 </body>
 
 <footer>
-    <!-- Contenedor FOOTER -->
-    <div class="footer container-fluid mt-2 fixed-bottom">
-        <!-- Primera fila imagen, título y botón de ayuda  -->
-        <div class="row justify-content-around ml-5">
-            <div class="col-3 mt-3">
-                <p>
-                    Ajuntament de Badalona<br>
-                    Direcció de Cultura<br>
-                    P-0812000H<br>
-                    Cºdel mar 1 Badalona<br>
-                    <a href="https://goo.gl/maps/77tJg5sd97tHZJv19">--- Google Maps</a><br>
-                    Tel. 93 311 11 11 - Fax 93 758 23 62
-                    A/e: <a href="">Cultura@ajbadalona.cat</a>
-                </p>
-            </div>
-            <div class="col-3 mt-3">
-                <p>
-                    Horari d'atenció al públic i venta d'entrades de dilluns a divendres de 9 a 14h <br>
-                    De dimecres a divendres de 18 a 20h.
-                </p>
-            </div>
-            <div class="col-2 mt-3">
-                <p>
-                    <a href="">Nota legal</a><br>
-                    <a href="">Subscriu-te al butlletí</a><br>
-                    <a href="">Contacta</a>
-                </p>
-            </div>
-        </div>
-    </div>
+    <?php
+    include_once __DIR__ . "/dinamico/footer.php";
+    ?>
 </footer>
 
 </html>
